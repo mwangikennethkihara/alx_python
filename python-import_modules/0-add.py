@@ -1,12 +1,16 @@
-def add(a, b):
-    return a + b
+#!/usr/bin/pyhon3
 
-if __name__ == "__main__":
+from add import add
+
+
+def main():
+
     a = 1
     b = 2
 
     result = add(a, b)
 
-    # Display the result using a single print statement
-    print(f"{a} + {b} = {result}")
+    print("{} + {} = {}".format(a, b, result))
 
+if __name__ == "__main__":
+    main()
