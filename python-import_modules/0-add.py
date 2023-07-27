@@ -1,16 +1,7 @@
-#!/usr/bin/pyhon3
-
-from add import add
-
-
-def main():
-
+#!/usr/bin/python3
+from add_0 import add
+if __name__ == "__main__":
+    """Print sumof a and b"""
     a = 1
     b = 2
-
-    result = add(a, b)
-
-    print("{} + {} = {}".format(a, b, result))
-
-if __name__ == "__main__":
-    main()
+    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
