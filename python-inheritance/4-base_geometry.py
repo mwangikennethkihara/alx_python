@@ -1,11 +1,14 @@
 """
-fourth python inheritance task
+an empty class
 """
-
-
-def inherits_from(obj, a_class):
+class BaseGeometry:
     """
-    non empty class
+    empy class
+    """
+    pass
+
+    """
+    a function that defines area and raise exception
     """
     def area(self):
-        print("area() is not implemented")
+        raise Exception("area() is not implemented")

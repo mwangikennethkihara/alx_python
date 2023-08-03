@@ -1,10 +1,8 @@
-"""this is an empty class"""
+"""
+an empty class
+"""
 class BaseGeometry:
-    """this is a place holder for this empty class"""
+    """
+    empy class
+    """
     pass
-
-bg = BaseGeometry()
-
-print(bg)
-print(dir(bg))
-print(dir(BaseGeometry))
