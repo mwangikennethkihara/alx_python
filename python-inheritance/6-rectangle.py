@@ -1,40 +1,27 @@
 #!/usr/bin/python3
-"""a base moduleclass"""
+"""
+Creates a Rectangle class.
+"""
 
 
-class BaseGeometry:
-
-    """a method that calculates the area but is not implemented"""
-    def area(self):
-        """an exception raised"""
-        raise Exception("area() is not implemented")
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
 
-    def integer_validator(self, name, value):
-        self.name = "name"
-        """
-        value: validating the value
-        """
-        if type(value) is int:
-            if value <= 0:
-                raise ValueError("{} must be greater than 0".format(name))
-            else:
-                self.value = value
-        else:
-            raise TypeError("{} must be an integer".format(name))
-
-"""a subclass Rectangle"""
 class Rectangle(BaseGeometry):
-    
-    """a method that excludes the __init_subclass__ from the dir"""
-    def __dir__(cls) -> None:
-        attributes = super().__dir__()
-        return [attribute for attribute in attributes if attribute != "__init_subclass__"]
+    """class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
+    Private instance attributes:
+        - width
+        - height
+    Inherits from BaseGeometry.
+    """
 
-
-    """Instantiation with width and height"""
     def __init__(self, width, height):
-        self.__width = width
-        self.__height = height
+        """Initializes an instance.
+        Args:
+            - width: width of the rectangle
+            - heigth: height of the rectangle
+        """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
